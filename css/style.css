@@ -1,0 +1,121 @@
+@charset "utf-8";
+body {
+  font-size: 16px;
+}
+.main{
+  background-color: #fbfbfb;
+  background-image: url(../images/mizutama.png);
+  background-size: 160px 64px;
+  padding: 90px 15px;
+  min-height: 1080px;
+}
+:root {
+  --line-color: #6CBAD8;/*←ノート内の線の色*/
+  /*-------------------------
+    おすすめ #6CBAD8 （青）
+            #ff5555 （赤）
+            #69914a （緑）
+            #777777 （グレー）
+  ---------------------------  */
+  --title-height: 36px;
+}
+/* -------
+* note
+--------- */
+.note {
+  background-color: #fbfbfb;
+  margin: 30px auto;
+  border: solid 1px #eeeeee;
+  padding: 32px 15px 40px 15px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+  max-width:960px;
+}
+/* line */
+.note-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+.note-line_left {
+  display: block;
+  width: 45%;
+  height: auto;
+  border-bottom: solid 2px var(--line-color);
+  display: inline-block;
+}
+.note-line_right {
+  display:inline-block;
+  width: 30%;
+  font-size: 12px;
+  text-align: center;
+  color: var(--line-color);
+  line-height: 1.6;
+}
+.note-no {
+  display: block;
+  border-bottom: solid 2px var(--line-color);
+}
+.note-date {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid 2px var(--line-color);
+}
+.note-title {
+  width: 100%;
+  height: var(--title-height);
+  border-top: solid 3px var(--line-color);
+  border-bottom: solid 3px var(--line-color);
+  font-size: 24px;
+  line-height: var(--title-height);
+}
+.note-title p {
+  margin-left: 0.5em;
+}
+.note p {
+  color: #060606;
+}
+.note-dotted {
+  /*1px × 2pxのドットで間隔が32pxの点線をtopに表示*/
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--line-color), var(--line-color) 1px, transparent 1px, transparent 31px);
+  background-size: 32px 2px;/*31+1=32px , height=2px*/
+  background-position: top center;
+  background-repeat: repeat-x;/*X方向にリピート*/
+}
+.dot-under {
+  position: relative;
+  top: -6px;
+}
+.sentence {
+  width: 100%;
+  box-sizing: border-box;
+  padding:0 0.3em;
+  background: #fbfbfb linear-gradient(var(--line-color) 1px, transparent 1px);
+  background-size: auto 2em;
+  background-position: top -4px right 0;
+  line-height: 2em;
+  overflow: hidden;
+}
+
+/*-------------
+*   P.S.
+----------------*/
+.ps {
+  width: auto;
+  margin: 20px auto;
+  background-color: #e3e3e3;
+  border: solid 3px #555555;
+  border-radius: 3px;
+  padding: 10px;
+  max-width:960px;
+  text-align: center;
+}
+.link{
+  color: #555555;
+  text-decoration: none;
+  line-height: 2;
+}
+.underline {
+  text-decoration: underline;
+}
