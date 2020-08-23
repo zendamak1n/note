@@ -65,7 +65,7 @@ body {
   height: var(--title-height);
   border-top: solid 3px var(--line-color);
   border-bottom: solid 3px var(--line-color);
-  font-size: 24px;
+  font-size: 20px;
   line-height: var(--title-height);
 }
 .note-title p {
